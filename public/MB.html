@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile</title>
+    <link rel="stylesheet" href="MB.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
+    />
+    <link rel="shortcut icon" href="icons/logo.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <ul>
+      <img src="icons/logo.png" alt="Logo" />
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="JE.html">Jogos dos Estágiarios</a></li>
+      <li><a href="JC.html">Jogos das Crianças</a></li>
+      <li><a href="SN.html">Sobre Nós</a></li>
+      <li>
+        <a
+          href="https://youtube.com/@ongsolidariedadenoscratch?si=y7DljZHn8nVDkA87"
+          target="_blank"
+          >Canal do Youtube</a
+        >
+      </li>
+      <li><a href="MB.html">Mobile</a></li>
+    </ul>
+    <content>
+      <a
+        id="downloadLink"
+        href="https://mega.nz/file/hW9EgIBB#yLbP193U_5wLMD4zLwOBi3OfD-ZOGDDj4I5ayx0EGdQ"
+        download
+        >Baixe o nosso APP</a
+      >
+
+      <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Substitua o link abaixo pelo link real do seu software
+          var downloadLink =
+            "https://mega.nz/file/hW9EgIBB#yLbP193U_5wLMD4zLwOBi3OfD-ZOGDDj4I5ayx0EGdQ";
+
+          // Criação do QR code
+          var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: downloadLink,
+            width: 200,
+            height: 200,
+          });
+
+          // Adiciona o link de download ao clicar no QR code
+          document
+            .getElementById("qrcode")
+            .addEventListener("click", function () {
+              window.location.href = downloadLink;
+            });
+        });
+      </script>
+
+      <div id="qrcode"></div>
+    </content>
+  </body>
+</html>

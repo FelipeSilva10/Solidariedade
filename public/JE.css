@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: whitesmoke;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+ul img {
+  inline-size: 3rem;
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  padding: 15px 10px 15px 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Noto-sans", sans-serif;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.banner {
+  display: flexbox;
+  background: #f8b400;
+  text-align: center;
+  padding: 40px;
+  font-size: 1rem;
+  font-family: "Noto-sans", sans-serif;
+  color: white;
+  -webkit-text-stroke-color: #333;
+  -webkit-text-stroke-width: 1px;
+}
+
+.jogo-container {
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 5%;
+  font-family: monospace;
+  text-align: center;
+}
+
+.jogo-container img {
+  max-width: 13em;
+  max-height: 13em;
+}
