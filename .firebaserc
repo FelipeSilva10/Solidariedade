@@ -1,8 +1,5 @@
 {
   "projects": {
-    "default": "estagio-solidariedade",
-    "\"/home/felipe/Projetos/Sites/Solidariedade/public"": "estagio-solidariedade"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "estagio-solidariedade"
+  }
 }
