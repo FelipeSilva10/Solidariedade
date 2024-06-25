@@ -9,6 +9,7 @@ body {
 }
 
 ul {
+  position: sticky;
   list-style-type: none;
   overflow: hidden;
   background-color: #333;
@@ -21,6 +22,11 @@ ul {
   padding-left: 1%;
   gap: 1%;
   box-shadow: 0px 5px 5px 1px #333;
+  z-index: 1;
+}
+
+ul:hover li:not(:hover){
+  opacity: 0.5;
 }
 
 li a::after{
@@ -35,6 +41,7 @@ li a::after{
 
 li {
   float: left;
+  transition: opacity ease-out 0.6s;
 }
 
 ul img {
@@ -234,7 +241,7 @@ li a:hover::after{
     width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .jogo-container{
     transform: scale(1.5);

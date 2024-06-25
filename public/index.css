@@ -32,6 +32,7 @@ li a::after{
 
 li {
   float: left;
+  transition: opacity ease-out .6s;
 }
 
 ul img {
@@ -56,6 +57,10 @@ li a {
   font-family: "Noto-sans", sans-serif;
   transform: translateY(4%);
   transition: transform ease-out 0.5s;
+}
+
+ul:hover li:not(:hover){
+  opacity: 0.5;
 }
 
 li a::before{
