@@ -150,4 +150,7 @@ p {
   ul li{
     width: 100%;
   }
+  p{
+    display: none;
+  }
 }

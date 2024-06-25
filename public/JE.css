@@ -194,13 +194,12 @@ li a:hover::after{
   ul {
     padding-top: 1%;
     padding-bottom: 3%;
-    padding-left: 3%;
     padding-right: 5%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     overflow-x: scroll;
-    gap: 110px;
+    gap: 100px;
     width: 100%;
   }
   ul::-webkit-scrollbar{
