@@ -69,7 +69,7 @@ li a::before{
   top: -150%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  transition: top ease-out 0.5s;
+  transition: top ease 0.5s;
 }
 
 li a:hover{
@@ -144,8 +144,5 @@ p {
   }
   ul li{
     width: 100%;
-  }
-  p {
-    display: none;
   }
 }
