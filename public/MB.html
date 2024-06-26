@@ -18,48 +18,56 @@
       <li><a href="index.html">Página Inicial</a></li>
       <li><a href="JE.html">Jogos dos Estágiarios</a></li>
       <li><a href="JC.html">Jogos das Crianças</a></li>
-      <li><a href="SN.html">Sobre Nós</a></li>
       <li>
         <a
-          href="https://youtube.com/@ongsolidariedadenoscratch?si=y7DljZHn8nVDkA87"
-          target="_blank"
-          >Canal do Youtube</a
+        href="https://youtube.com/@ongsolidariedadenoscratch?si=y7DljZHn8nVDkA87"
+        target="_blank"
+        >Canal do Youtube</a
         >
       </li>
       <li><a href="MB.html">Mobile</a></li>
+      <li><a href="SN.html">Sobre Nós</a></li>
     </ul>
-    <content>
-      <a
-        id="downloadLink"
-        href="https://mega.nz/file/hW9EgIBB#yLbP193U_5wLMD4zLwOBi3OfD-ZOGDDj4I5ayx0EGdQ"
-        download
-        >Baixe o nosso APP</a
-      >
 
-      <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          // Substitua o link abaixo pelo link real do seu software
-          var downloadLink =
-            "https://mega.nz/file/hW9EgIBB#yLbP193U_5wLMD4zLwOBi3OfD-ZOGDDj4I5ayx0EGdQ";
+    <div class="app">
 
-          // Criação do QR code
-          var qrcode = new QRCode(document.getElementById("qrcode"), {
-            text: downloadLink,
-            width: 200,
-            height: 200,
-          });
+      <content>
+        <h3>Nosso app está sendo feito com a finalidade de fornecer uma experiência igualmente agradável para os usuários de celular que desejam dar uma olhada no nosso projeto trabalho.
+          Com o app, você desfrutará de uma versão móvel do nosso site. Estamos em constante desenvolvimento. Portanto, agradecemos sua paciência. 
+          Você pode baixar o app <a
+          id="downloadLink"
+          href="https://mega.nz/file/hW9EgIBB#yLbP193U_5wLMD4zLwOBi3OfD-ZOGDDj4I5ayx0EGdQ"
+          download
+          >aqui</a> ou pelo QR Code abaixo. </h1>
 
-          // Adiciona o link de download ao clicar no QR code
-          document
-            .getElementById("qrcode")
-            .addEventListener("click", function () {
-              window.location.href = downloadLink;
+          <div id="qrcode"></div>
+          
+        </content>
+        
+        <img class="foto" src="Img/f3ff1d5b7be.png" alt="Aplicativo Mobile" width="20%">
+      </div>
+      
+        <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Substitua o link abaixo pelo link real do seu software
+            var downloadLink =
+              "https://mega.nz/file/hW9EgIBB#yLbP193U_5wLMD4zLwOBi3OfD-ZOGDDj4I5ayx0EGdQ";
+
+            // Criação do QR code
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+              text: downloadLink,
+              width: 280,
+              height: 280,
             });
-        });
-      </script>
 
-      <div id="qrcode"></div>
-    </content>
+            // Adiciona o link de download ao clicar no QR code
+            document
+              .getElementById("qrcode")
+              .addEventListener("click", function () {
+                window.location.href = downloadLink;
+              });
+          });
+        </script>
   </body>
 </html>
