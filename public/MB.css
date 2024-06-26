@@ -5,6 +5,7 @@
 
 body {
   background: #f8b400;
+  background-image: linear-gradient(#f8b400 60%,#333);
   overflow: hidden;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -98,16 +99,18 @@ li a:hover::after{
 
 .app{
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  margin-left: 5%;
 }
 
 .foto{
-  position: relative;
+  position: absolute;
   bottom: 0;
   right: 0;
   width: 40%;
-  height: auto;
-  animation: fadeUp ease-out 1s;
+  height: 90%;
+  animation: fadeIn ease-out 1s;
+  filter: drop-shadow(1px 2px 3px #f8b400);
 }
 
 content{
@@ -118,6 +121,29 @@ content{
   justify-content: center;
   height: 80vh;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #333;
+  overflow: hidden;
+}
+
+content h1::after{
+  display: block;
+  content: "";
+  background-color: #333;
+  width: 35%;
+  height: 3px;
+  margin-top: 1px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  transition: width ease-out 0.5s;
+}
+
+content h1:hover::after{
+  width: 50%;
+}
+
+content h3{
+  text-indent: 1.25cm;
+  
 }
 
 .links{
@@ -125,6 +151,8 @@ content{
   display: flex;
   align-items: center;
   display:inline-flexbox;
+  gap: 5%;
+  animation: fadeUp ease-out 1s;
 }
 
 .download-buttons {
@@ -134,8 +162,8 @@ content{
 }
 
 .download-buttons img {
-  width: 70%;
-  height: auto;
+  width: 210px;
+  height: 105px;
   transition: ease-out 0.6s;
 }
 
@@ -148,19 +176,41 @@ content{
 #qrcode {
   transition: ease-out 0.6s;
   cursor: pointer;
-  animation: fadeUp ease-out 1s;
 }
+
 #qrcode:hover {
   transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.2);
   filter: brightness(0.8);
 }
+
+#qrcode::after{
+  display: block;
+  position: absolute;
+  content: "";
+  background-image: url("Img/escaner.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 50%;
+  height: 50%;
+  margin-top: 10px;
+  transform: translate(300%,-150%);
+  transition: transform ease-out 0.9s, opacity ease-out 0.9s;
+  opacity: 0;
+}
+
+#qrcode:hover::after{
+  transform: translate(200%, -150%);
+  opacity: 1;
+}
+
 .text{
   width: 80%;
   text-align: justify;
   font-size: clamp(0.95rem, 1.5vw, 1.3vw);
   padding: 1%;
-  animation: fadeIn 1s ease-out;
+  animation: fadeDown 1.5s ease-out;
+  cursor: default;
 }
 
 h1{
@@ -260,5 +310,15 @@ h1{
   }
   content, content h3{
     width: 95%;
+  }
+  .app{
+    justify-content: center;
+  }
+  .text{
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  #qrcode:after{
+    display: none;
   }
 }
