@@ -121,6 +121,7 @@ content{
 }
 
 .links{
+  margin-top: 10%;
   display: flex;
   align-items: center;
   display:inline-flexbox;
@@ -145,8 +146,6 @@ content{
 }
 
 #qrcode {
-  margin-top: 5%;
-  padding: 1%;
   transition: ease-out 0.6s;
   cursor: pointer;
   animation: fadeUp ease-out 1s;
@@ -157,7 +156,7 @@ content{
   filter: brightness(0.8);
 }
 .text{
-  width: 70%;
+  width: 80%;
   text-align: justify;
   font-size: clamp(0.95rem, 1.5vw, 1.3vw);
   padding: 1%;
