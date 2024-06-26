@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -310,6 +311,7 @@ h1{
   }
   content, content h3{
     width: 95%;
+    overflow: visible;
   }
   .app{
     justify-content: center;
@@ -320,5 +322,9 @@ h1{
   }
   #qrcode:after{
     display: none;
+  }
+  .links{
+    transform: scale(0.9);
+    gap: 1%;
   }
 }

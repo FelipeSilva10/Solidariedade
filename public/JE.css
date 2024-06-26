@@ -240,11 +240,11 @@ li a:hover::after{
     width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 60px;
   }
   .jogo-container{
     transform: scale(1.5);
-    margin-bottom: 90px;
+    margin-bottom: 120px;
   }
   .jogo-container p{
     width: 150%;
