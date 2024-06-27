@@ -1,41 +1,123 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: #f8b400;
+  overflow: hidden;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar{
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #333;
+  border-radius: 10px;
+  border: 2px solid #f8b400;
 }
 
 ul {
+  position: sticky;
   list-style-type: none;
   overflow: hidden;
   background-color: #333;
-  position: static;
   top: 0%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 1%;
+  gap: 1%;
+  box-shadow: 0px 5px 5px 1px #333;
+  z-index: 1;
+}
+
+ul:hover li:not(:hover){
+  opacity: 0.5;
+}
+
+li a::after{
+  content: "";
+  display: block;
+  background-color: aliceblue;
+  width: 0;
+  height: 2px;
+  margin-top: 2%;
+  transition: width 0.5s;
 }
 
 li {
   float: left;
+  transition: opacity ease-out 0.6s;
 }
 
 ul img {
-  inline-size: 3rem;
+  inline-size: 3.5rem;
   float: left;
+  transition: transform ease-out 0.6s;
+}
+
+ul img:hover{
+  transform: rotate(180deg);
 }
 
 li a {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
   color: white;
   padding: 15px 10px 15px 10px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.4vw, 1.3vw);
   font-family: "Noto-sans", sans-serif;
+  transform: translateY(4%);
+  transition: transform 0.5s ease-out;
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+li a::before{
+  display: block;
+  content: "";
+  height: 110%;
+  width: 100%;
+  position: absolute;
+  background-image: linear-gradient(#333,#f8b400);
+  z-index: -1;
+  top: -150%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: top 0.5s ease;
+}
+
+li a:hover{
+  transform: translateY(-2%);
+}
+
+li a:hover::before{
+  top: -6%;
+}
+
+li a:hover::after{
+  width: 90%;
+}
+
+.sobre-nos{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .texto {
@@ -43,23 +125,246 @@ li a:hover:not(.active) {
   text-align: justify;
   margin: 10%;
   color: aliceblue;
-  background-color: #333;
-  padding: 8%;
-  max-width: 70%;
+  background-color: #333333e2;
+  padding: 5%;
+  max-width: 80%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .texto h1 {
   font-size: 2em;
   margin-bottom: 20px;
+  text-align: center;
+  animation: fadeInR 1s ease-out;
 }
 
 .texto h2 {
   font-size: 1.2em;
   margin-top: 20px;
   margin-bottom: 10px;
+  animation: fadeInR 1s ease-out;
 }
 
 .texto p {
+  text-indent: 1.25cm;
   font-size: 1em;
   margin-bottom: 15px;
+  animation: fadeIn 1s ease-out;
+}
+
+.texto p::after{
+  display: block;
+  content: "";
+  background-color: aliceblue;
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+}
+
+.equipe{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -100px;
+  margin-bottom: 20px;
+  background-color: aliceblue;
+  padding: 1%;
+  background-image: linear-gradient(#f8b400 60%, #333);
+  box-shadow: 2px 3px 4px #333;
+  border-radius: 10px;
+}
+
+.equipe h2{
+  font-size: 3vw;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.equipe h2::after{
+   display: block;
+   content: "";
+   width: 70%;
+   height: 1px;
+   background-color: #333;
+   margin-left: 50%;
+   translate: -50% 0;
+}
+
+.container{
+  width: 90%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-inline: 50px;
+}
+
+.card{
+  width: 25%;
+  height: 100%;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: width 0.5s ease-in-out;
+  background-image: url("avatares/guilherme.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.eli{
+  background-image: url("avatares/eli.png");
+}
+.erick{
+  background-image: url("avatares/erick.png");
+}
+.felipe{
+  background-image: url("avatares/felipe.png");
+}
+.card:hover{
+  width: 50%;
+}
+
+.container:hover .card:not(:hover){
+  width: 16.666%;
+}
+
+.descrip{
+  font-size: 1.5vw;
+  color: #333;
+  background-color: #f8b600c5;
+  padding: 2%;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.descrip p{
+  text-indent: 1.25cm;
+  text-align: justify;
+}
+
+.card:hover .descrip{
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0%);
+  } 
+}
+
+@keyframes fadeInR {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+  } 
+}
+
+@media only screen and (max-width: 900px){
+  .sobre-nos{
+    margin-top: 550px;
+  }
+  .equipe{
+    margin-top: -10px;
+  }
+  .descrip{
+    font-size: 2vw;
+  }
+}
+
+
+@media only screen and (max-width: 700px){
+  body{
+    overflow-y: scroll;
+  }
+  body::-webkit-scrollbar{
+    width: 10px;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #f8b400;
+  }
+  ul {
+    padding-top: 1%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow-x: scroll;
+    gap: 110px;
+    width: 100%;
+  }
+  ul:nth-last-child(){
+    padding-left: -5%;
+  }
+  ul::-webkit-scrollbar{
+    width: 10px;
+  }
+  ul::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border-radius: 10px;
+    border: 2px solid #f8b400;
+  }
+  ul img{
+    transform: scale(1.5);
+    margin-right: -100px;
+  }
+  li {
+    width: max-content;
+  }
+  li a{
+    font-size: 3vw;
+    width: 200%;
+  }
+  li a::before{
+    top: -170%;
+    width: 90%;
+    transform: translateX(3%);    
+  }
+  li a:hover::after{
+    width: 60%;
+  }
+  li a:hover::before{
+    top: 0;
+    left: 0%;
+  }
+  ul li{
+    width: 100%;
+  }
+  .texto{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  .equipe{
+    width: 100%;
+  }
+  .equipe h2{
+    font-size: 5vw;
+  }
+  .card:hover{
+    width: 70%;
+  }
+  .container:hover .card:not(:hover){
+    width: 10%;
+  }
+  .descrip{
+    font-size: 3vw;
+  }
 }
