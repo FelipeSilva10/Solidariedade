@@ -1,0 +1,156 @@
+body {
+  background: #f8b400;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  top: 0%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 1%;
+  gap: 1%;
+  box-shadow: 0px 5px 5px 1px #333;
+}
+
+li a::after{
+  content: "";
+  display: block;
+  background-color: aliceblue;
+  width: 0;
+  height: 2px;
+  margin-top: 2%;
+  transition: width 0.5s;
+}
+
+li {
+  float: left;
+  transition: opacity ease-out .6s;
+}
+
+ul img {
+  inline-size: 3.5rem;
+  float: left;
+  transition: transform ease-out 0.6s;
+}
+
+ul img:hover{
+  transform: rotate(180deg);
+}
+
+li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  color: white;
+  padding: 15px 10px 15px 10px;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 1.4vw, 1.3vw);
+  font-family: "Noto-sans", sans-serif;
+  transform: translateY(4%);
+  transition: transform ease-out 0.5s;
+}
+
+ul:hover li:not(:hover){
+  opacity: 0.5;
+}
+
+li a::before{
+  display: block;
+  content: "";
+  height: 110%;
+  width: 100%;
+  position: absolute;
+  background-image: linear-gradient(#333,#f8b400);
+  z-index: -1;
+  top: -150%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: top ease 0.5s;
+}
+
+li a:hover{
+  transform: translateY(-2%);
+}
+
+li a:hover::before{
+  top: -6%;
+}
+
+li a:hover::after{
+  width: 90%;
+}
+
+p {
+  font-weight: 600;
+  -webkit-text-fill-color: aliceblue;
+  -webkit-text-stroke-color: #333;
+  -webkit-text-stroke-width: 1px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 5rem;
+  padding: 8% 10px 10px 10px;
+  overflow: hidden;
+  word-wrap: break-word;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+  
+}
+
+@media only screen and (max-width: 600px){
+  body{
+    height: 100%;
+  }
+  ul {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+  }
+  ul img{
+    transform: scale(1.5);
+  }
+  li a{
+    font-size: 5vw;
+  }
+  li a:hover::after{
+    width: 50%;
+  }
+  li a::before{
+    top: 0;
+    left: 150%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 0;
+    transition: left ease-out 0.5s;
+    background-image: linear-gradient( to right, #f8b400, #333);
+  }
+  li a:hover::before{
+    top: 0;
+    left: 0%;
+  }
+  ul li{
+    width: 100%;
+  }
+  p{
+    display: none;
+  }
+}
