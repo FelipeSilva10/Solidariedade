@@ -69,3 +69,5 @@ functions
 
 package-lock.json
 package.json
+
+.gitignore
