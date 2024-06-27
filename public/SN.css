@@ -347,6 +347,9 @@ li a:hover::after{
   ul li{
     width: 100%;
   }
+  .sobre-nos{
+    margin-top: 650px;
+  }
   .texto{
     width: 100%;
     max-width: 100%;

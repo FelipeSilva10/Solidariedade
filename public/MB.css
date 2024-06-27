@@ -324,6 +324,7 @@ h1{
     display: none;
   }
   .links{
+    margin-left: -20px;
     transform: scale(0.9);
     gap: 1%;
   }
