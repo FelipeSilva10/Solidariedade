@@ -1,24 +1,228 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página inicial</title>
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="shortcut icon" href="icons/logo.png" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Soli preserva a memória do Estágio Solidariedade: aulas de Scratch, jogos, aplicativo, vídeos e materiais."
+    />
+    <title>Soli — memória do Estágio Solidariedade</title>
+    <link rel="icon" href="icons/soli.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/site.css" />
+    <script src="js/site.js" defer></script>
   </head>
 
-  <body>
-    <ul>
-      <img src="icons/logo.png" alt="Logo" />
-      <li><a href="index.html">Página Inicial</a></li>
-      <li><a href="JE.html">Jogos dos Estágiarios</a></li>
-      <li><a href="JC.html">Jogos das Crianças</a></li>
-      <li><a href="YT.html">Canal do Youtube</a></li>
-      <li><a href="MB.html">App Mobile</a></li>
-      <li><a href="SN.html">Sobre Nós</a></li>
-    </ul>
+  <body data-page="home">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <div data-site-header>
+      <noscript>
+        <nav class="noscript-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="jogos.html">Jogos</a>
+          <a href="equipe.html">Equipe</a>
+        </nav>
+      </noscript>
+    </div>
 
-    <p>Estágio Solidariedade</p>
+    <main id="conteudo">
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow">Soli — acervo </p>
+            <h1>A memória de um projeto feito com Scratch.</h1>
+            <p class="lead">
+              Soli nasceu do Estágio Solidariedade e preserva o que foi realizado:
+              aulas de programação, jogos publicados, aplicativo Android,
+              vídeos e materiais.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="jogos.html">Explorar jogos</a>
+              <a class="button button--secondary" href="#historia">Conhecer a história</a>
+            </div>
+          </div>
+          <div class="hero__symbol" aria-hidden="true">
+            <span class="hero__code">{{ }}</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--paper" aria-label="Resumo do acervo">
+        <div class="section__inner">
+          <div class="fact-strip">
+            <div class="fact-strip__item">
+              <strong>13</strong>
+              <span>arquivos de jogos HTML preservados</span>
+            </div>
+            <div class="fact-strip__item">
+              <strong>4</strong>
+              <span>integrantes registrados na equipe</span>
+            </div>
+            <div class="fact-strip__item">
+              <strong>1</strong>
+              <span>aplicativo Android mantido no acervo</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="historia">
+        <div class="section__inner story-grid">
+          <div class="story-copy">
+            <p class="eyebrow">O que foi o Estágio Solidariedade</p>
+            <h2 class="content-heading">Programação ensinada pela prática.</h2>
+            <h3>Começo nas aulas</h3>
+            <p>
+              O Estágio Solidariedade aproximou crianças da programação em blocos
+              com Scratch. As atividades usaram a criação de jogos para trabalhar
+              lógica, experimentação e temas presentes nas aulas.
+            </p>
+            <h3>Publicação como registro</h3>
+            <p>
+              Os projetos foram exportados para páginas HTML e disponibilizados no
+              navegador. Hoje, cada arquivo continua acessível como parte do
+              registro do projeto.
+            </p>
+          </div>
+          <aside class="story-aside">
+            <p class="eyebrow">Soli hoje</p>
+            <p>
+              Não é uma plataforma em expansão. É o lugar onde esse trabalho
+              continua disponível para ser visto, jogado e lembrado.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--amber">
+        <div class="section__inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Percurso do projeto</p>
+              <h2>Das aulas ao acervo.</h2>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline__item">
+              <span class="timeline__number">01</span>
+              <h3>Aulas com Scratch</h3>
+              <p>Programação em blocos como ponto de partida das atividades.</p>
+            </article>
+            <article class="timeline__item">
+              <span class="timeline__number">02</span>
+              <h3>Criação dos jogos</h3>
+              <p>As crianças criaram jogos durante as atividades e os trabalhos foram publicados.</p>
+            </article>
+            <article class="timeline__item">
+              <span class="timeline__number">03</span>
+              <h3>Site e aplicativo</h3>
+              <p>O acervo ganhou formas de acesso no navegador e no Android.</p>
+            </article>
+            <article class="timeline__item">
+              <span class="timeline__number">04</span>
+              <h3>Vídeos e memória</h3>
+              <p>Materiais em vídeo e o Soli passaram a reunir os registros preservados.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Acervo jogável</p>
+              <h2>Os jogos seguem disponíveis.</h2>
+            </div>
+            <a class="button button--dark" href="jogos.html">Ver o acervo completo</a>
+          </div>
+
+          <article class="feature-game">
+            <div class="feature-game__image">
+              <img
+                src="icons/icon1.jpg"
+                alt="Capa colorida do jogo Guerra Aritmética"
+                loading="lazy"
+              />
+            </div>
+            <div class="feature-game__body">
+              <p class="eyebrow">Para começar</p>
+              <h3>Guerra Aritmética</h3>
+              <p>
+                Um dos jogos publicados no acervo, em que desafios de matemática
+                aparecem em um cenário de aventura espacial.
+              </p>
+              <a class="text-link" href="jogos/JOGO1.html">Abrir jogo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--paper">
+        <div class="section__inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Outros registros</p>
+              <h2>O projeto também tomou outras formas.</h2>
+            </div>
+            <p>
+              O aplicativo e os vídeos não são produtos separados: são partes do
+              que foi construído durante o percurso.
+            </p>
+          </div>
+
+          <div class="record-grid">
+            <article class="record-card">
+              <div>
+                <p class="eyebrow">Aplicativo Android</p>
+                <h3>O acervo no celular</h3>
+                <p>
+                  Uma versão Android foi criada para facilitar o acesso aos jogos
+                  em dispositivos móveis e apoiar a apresentação dos trabalhos.
+                </p>
+                <a class="text-link" href="MB.html">Ver app e downloads</a>
+              </div>
+              <div class="record-card__visual">
+                <img
+                  src="Img/imgapp.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="record-card">
+              <div>
+                <p class="eyebrow">Vídeos e materiais</p>
+                <h3>Scratch registrado em vídeo</h3>
+                <p>
+                  O canal preserva tutoriais e conteúdos relacionados à criação
+                  com Scratch, ampliando o registro para além dos jogos.
+                </p>
+                <a class="text-link" href="YT.html">Assistir aos vídeos</a>
+              </div>
+              <div class="record-card__visual" aria-hidden="true">
+                <span class="record-card__symbol">&gt;_</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--ink">
+        <div class="section__inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Quem participou</p>
+              <h2>A equipe aparece pelo que construiu.</h2>
+            </div>
+          </div>
+          <a class="button" href="equipe.html">Conhecer a equipe</a>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
   </body>
 </html>

@@ -1,73 +1,142 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Versão Android preservada do Estágio Solidariedade no acervo Soli."
+    />
+    <title>Aplicativo Android — Soli</title>
+    <link rel="icon" href="icons/soli.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/site.css" />
+    <script src="js/site.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobile</title>
-  <link rel="stylesheet" href="css/MB.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" />
-  <link rel="shortcut icon" href="icons/logo.png" type="image/x-icon" />
-</head>
+  <body data-page="archive">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <div data-site-header>
+      <noscript>
+        <nav class="noscript-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="jogos.html">Jogos</a>
+          <a href="equipe.html">Equipe</a>
+        </nav>
+      </noscript>
+    </div>
 
-<body>
-  <ul>
-    <img src="icons/logo.png" alt="Logo" />
-    <li><a href="index.html">Página Inicial</a></li>
-    <li><a href="JE.html">Jogos dos Estágiarios</a></li>
-    <li><a href="JC.html">Jogos das Crianças</a></li>
-    <li><a href="YT.html">Canal do Youtube</a></li>
-    <li><a href="MB.html">Mobile</a></li>
-    <li><a href="SN.html">Sobre Nós</a></li>
-  </ul>
-
-  <div class="app">
-
-    <content>
-      <div class="text">
-        <h1>Baixe nosso App</h1>
-        <h3>Nosso app está sendo feito com a finalidade de fornecer uma experiência igualmente agradável para os
-          usuários de celular que desejam dar uma olhada no nosso trabalho.
-          Com ele, você desfrutará de uma versão móvel do nosso site.</h3>
-      </div>
-      <div class="links">
-        <div class="download-buttons">
-          <a href="https://mega.nz/file/hW9EgIBB#yLbP193U_5wLMD4zLwOBi3OfD-ZOGDDj4I5ayx0EGdQ">
-            <img src="Img/imglinkmega.png" alt="download mega">
-          </a>
-          <a href="https://www.mediafire.com/file/dzlbd9npmjezq3d/Solidariedade1.3.apk/file">
-            <img src="Img/imglinkmediafire.png" alt="download mediafire">
-          </a>
+    <main id="conteudo">
+      <section class="hero hero--page">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow">Registro do projeto</p>
+            <h1>O aplicativo Android também faz parte do acervo.</h1>
+            <p class="lead">
+              A versão móvel foi criada para facilitar o acesso aos jogos em
+              celulares e apoiar a apresentação dos trabalhos em outros contextos.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="button"
+                href="https://www.mediafire.com/file/dzlbd9npmjezq3d/Solidariedade1.3.apk/file"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Baixar APK</a>
+              <a class="button button--secondary" href="#downloads">Ver opções</a>
+            </div>
+          </div>
+          <div class="hero__symbol hero__symbol--small" aria-hidden="true">
+            <span class="hero__code">{{ }}</span>
+          </div>
         </div>
-        <div id="qrcode"></div>
-      </div>
-    </content>
-  </div>
+      </section>
 
-  <img class="foto" src="Img/imgapp.png" alt="Aplicativo Mobile">
+      <section class="section section--paper" id="downloads">
+        <div class="section__inner app-layout">
+          <div class="app-layout__copy">
+            <p class="eyebrow">Downloads preservados</p>
+            <h2>Uma forma adicional de acessar o projeto.</h2>
+            <p>
+              Os links abaixo são os mesmos endereços registrados na versão
+              anterior do site. O QR code leva à página de links do projeto e o
+              botão textual continua disponível como alternativa.
+            </p>
 
-  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Substitua o link abaixo pelo link real do seu software
-      var downloadLink =
-        "https://linktr.ee/Solidariedades";
+            <div class="download-options">
+              <a
+                class="download-option"
+                href="https://www.mediafire.com/file/dzlbd9npmjezq3d/Solidariedade1.3.apk/file"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>APK 1.3 no MediaFire</span>
+                <span>abrir ↗</span>
+              </a>
+              <a
+                class="download-option"
+                href="https://mega.nz/file/hW9EgIBB#yLbP193U_5wLMD4zLwOBi3OfD-ZOGDDj4I5ayx0EGdQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Espelho no Mega</span>
+                <span>abrir ↗</span>
+              </a>
+              <a
+                class="download-option"
+                href="https://linktr.ee/Solidariedades"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Página de links do projeto</span>
+                <span>abrir ↗</span>
+              </a>
+            </div>
 
-      // Criação do QR code
-      var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: downloadLink,
-        width: 210,
-        height: 210,
-      });
+            <p class="archive-note">
+              A disponibilidade dos serviços externos depende dos próprios
+              provedores de download.
+            </p>
+          </div>
 
-      // Adiciona o link de download ao clicar no QR code
-      document
-        .getElementById("qrcode")
-        .addEventListener("click", function () {
-          window.location.href = downloadLink;
-        });
-    });
-  </script>
-</body>
+          <div class="app-layout__image">
+            <img
+              src="Img/imgapp.png"
+              alt="Tela do aplicativo do Estágio Solidariedade em um celular"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
 
+      <section class="section">
+        <div class="section__inner">
+          <div class="qr-card">
+            <p class="eyebrow">QR code</p>
+            <h3>Abrir a página de links</h3>
+            <p>
+              Aponte a câmera para o código ou use o botão abaixo. Nenhuma
+              biblioteca externa é necessária para exibir este QR code.
+            </p>
+            <img
+              src="Img/soli-links-qr.svg"
+              alt="QR code para a página de links Solidariedades no Linktree"
+              width="210"
+              height="210"
+              loading="lazy"
+            />
+            <p>
+              <a
+                class="text-link"
+                href="https://linktr.ee/Solidariedades"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Abrir página de links</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+  </body>
 </html>

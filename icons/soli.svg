@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Marca Soli</title>
+  <desc id="desc">Duas chaves de código dentro de um sol âmbar.</desc>
+  <circle cx="48" cy="48" r="43" fill="#E8940A"/>
+  <g fill="none" stroke="#FAF4E8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M38 28c-8 0-8 8-8 13s-5 7-8 7c3 0 8 2 8 7s0 13 8 13" stroke-width="5"/>
+    <path d="M58 28c8 0 8 8 8 13s5 7 8 7c-3 0-8 2-8 7s0 13-8 13" stroke-width="5"/>
+    <path d="m71 22 4-4M78 31l5-2M80 41h5" stroke-width="3"/>
+  </g>
+</svg>
