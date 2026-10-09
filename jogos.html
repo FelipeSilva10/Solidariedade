@@ -11,6 +11,7 @@
     <link rel="icon" href="icons/soli.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/site.css" />
     <script src="js/site.js" defer></script>
+    <script src="js/games.js" defer></script>
   </head>
 
   <body data-page="games">
@@ -29,25 +30,49 @@
       <section class="hero hero--page">
         <div class="hero__inner">
           <div class="hero__content">
-            <p class="eyebrow">Acervo jogável</p>
-              <h1>Jogos desenvolvidos no Scratch</h1>
-              <p class="lead">
-                O resultado do aprendizado na prática: jogos criados pelas próprias crianças, para elas mesmas.
-              </p>
+            <p class="eyebrow">Central de jogos</p>
+            <h1>Dê o play no acervo.</h1>
+            <p class="lead">
+              Jogos criados pelas crianças no Scratch. Escolha uma capa e jogue no navegador.
+            </p>
             <div class="hero__actions">
               <a class="button" href="#jogos-publicados">Ver jogos publicados</a>
               <a class="button button--secondary" href="#arquivos-preservados">Ver outros arquivos</a>
             </div>
           </div>
           <div class="hero__symbol hero__symbol--small" aria-hidden="true">
-            <span class="hero__code">{{ }}</span>
+            <span class="hero__code">{ }</span>
           </div>
+        </div>
+      </section>
+
+      <section class="section section--paper game-browser" aria-label="Busca de jogos">
+        <div class="section__inner">
+          <form class="game-toolbar" role="search" hidden>
+            <label for="game-search">Buscar no acervo</label>
+            <div class="game-search">
+              <input
+                id="game-search"
+                name="q"
+                type="search"
+                placeholder="Nome do jogo ou assunto…"
+                autocomplete="off"
+                aria-controls="jogos-publicados arquivos-preservados"
+              />
+              <button class="button button--secondary" type="reset">Limpar</button>
+            </div>
+            <p class="game-count" role="status" aria-live="polite" aria-atomic="true">13 jogos no acervo</p>
+          </form>
+          <p class="game-empty" hidden>Nenhum jogo encontrado. Tente outro nome ou assunto.</p>
+          <noscript><p class="game-count">13 jogos no acervo. Explore as capas abaixo.</p></noscript>
         </div>
       </section>
 
       <section class="section section--paper" id="jogos-publicados">
         <div class="section__inner">
-
+          <div class="section-heading">
+            <h2>Jogos publicados</h2>
+          </div>
           <div class="game-grid">
             <article class="game-card">
               <div class="game-card__image">
@@ -176,10 +201,10 @@
         <div class="section__inner">
           <div class="archive-group">
             <div class="archive-group__heading">
-              <h2>Outros arquivos preservados</h2>
+              <h2>Outros arquivos</h2>
             </div>
             <p class="archive-intro">
-              Jogos que não foram concluidos.
+              Projetos não concluídos, preservados como parte do acervo.
             </p>
 
             <div class="game-grid">
